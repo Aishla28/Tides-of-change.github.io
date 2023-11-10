@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="stylesheet" href="style1.css">
+</head>
+<body style="background-color:#e48c65">
+
+ <canvas id="myCanvas1" style="position:absolute;top:3200px;left:5px;width:50px;"></canvas>
+ <canvas id="myCanvas2" style="position:absolute;top:2300px;left:5px;width:50px"></canvas>
+
+<div class="navbar" style="position:fixed;top:0px;z-index:2">
+ <a href="landing_page.html">HOME</a>
+ <a href="#about">SYNOPSIS</a>
+ <a href="#contact">CONTACT US</a>
+</div>
+
+
+ <div class="video-container">
+    <video src="globalization.mp4" muted loop autoplay></video>
+ </div>
+ <div style="position:absolute;top:0px;margin-top:-100px">
+    <h1>Impact of Globalization in India</h1>
+ </div>
+
+ <div style="position:absolute;top:1000px">
+        <h2>How have migration trends in India changed post Globalization (LPG reforms)?</h2>
+
+     <div style="margin-left:40px;margin-right:40px;font-size:20px">
+         <p>Post globalization, mobility of people increased drastically, both within and outside the country. It is also far
+        more easier than before, to migrate to more developed countries for better opportunities post globalization, as
+        interconnectedness has increased. Within India, people began migrating from their native cities to other places for better
+        job oppurtunities, income, education, standard of living etc.</p></div>
+
+     <div>
+         <img src="interstate-migration2.jpg" alt="Your Image" style="position:absolute;margin-left:10px;left:0px;top:300px;width:700px;height:auto">
+     <img src="stakeholders.png" alt="Your Image" style="position: absolute;left:710px;top:400px;width:800px;height:auto">
+     </div>
+
+
+ <div style="position:relative;margin-left:40px;margin-right:40px;font-size:20px;top:850px">
+        <p>India's map above shows that most no. of people that have migrated are the ones belonging to
+            extremely densely populated states like UP and Bihar, Jharkhand etc. It is also important to note
+            that metropolitan cities like Delhi, Mumbai and Bengaluru have the most amount of influx.
+            Hence, Globalization has enabled people to move to urbanized areas due to better oppurtunities. Below are the percentages of male and female
+        share of migrant workers among total workers in major urban sectors.</p>
+    </div>
+</div>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;700&family=Overpass:wght@400;500;600&display=swap" rel="stylesheet"></link>
+
+ <div>
+<script>
+//----------------------------------First graph canvas2
+ var years = [
+            "Primary",
+            "Manufacturing",
+            "Public",
+            "Construction",
+            "Modern services"
+        ];
+
+
+        var Percentage_of_growth = [
+            '65',
+            '51',
+            '56',
+            '67',
+            '62'
+        ];
+
+        // Create a bar chart
+        var ctx2 = document.getElementById('myCanvas2').getContext('2d');
+        var barChart2 = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: years,
+                datasets: [{
+                    label: 'Female percentage of migrant workers among total workers in major urban sectors',
+                    data: Percentage_of_growth,
+                    backgroundColor: 'IndianRed', // Bar color
+                    borderColor: '00000', // Border color
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'sectors'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: '% of females'
+                        }
+                    }
+                }
+            }
+        });
+
+//----------------------------------Second graph canvas1
+        var years = [
+            "Primary",
+            "Manufacturing",
+            "Public services",
+            "Construction",
+            "Modern services"
+        ];
+
+        var totalGeneration = [
+            '20',
+            '38',
+            '40',
+            '32',
+            '40'
+        ];
+
+        var ctx = document.getElementById("myCanvas1").getContext("2d");
+        var barChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: years,
+                datasets: [{
+                    label: 'Percentage of male migrant workers among total workers in major urban sectors ',
+                    data: totalGeneration,
+                    backgroundColor: 'LightSeaGreen', // Bar color
+                    borderColor: 'rgba(75, 192, 192, 1)', // Border color
+                    borderWidth: 1
+
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'sectors'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Percentage of male migrant workers'
+                        }
+                    }
+                }
+            }
+        });
+
+
+	</script>
+ </div>
+</body>
+</html>
